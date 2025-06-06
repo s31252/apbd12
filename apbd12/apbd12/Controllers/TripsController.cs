@@ -28,8 +28,7 @@ public class TripsController : ControllerBase
         try
         {
             await _dbService.AssignClientToTrip(idTrip,dto);
-            //return Ok($"Client {dto.FirstName} {dto.LastName} assigned to trip {idTrip} successfully");
-            return Ok();
+            return Ok($"Client {dto.FirstName} {dto.LastName} assigned to trip {idTrip} successfully");
         }
         catch (Exception e)
         {
